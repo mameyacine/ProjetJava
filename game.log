@@ -1,0 +1,360 @@
+mars 15, 2024 11:02:11 PM project.GameWindow drawCard
+INFO: Joueur: Joueur a pioché une carte.
+mars 15, 2024 11:02:11 PM project.GameWindow drawCard
+INFO: Mise à jour de la main du joueur.
+mars 15, 2024 11:02:12 PM project.GameWindow updateHandAfterPlayingCard
+INFO: Mise à jour de la main du joueur.
+mars 15, 2024 11:02:12 PM project.GameWindow playCard
+INFO: Le joueur a invoqué un monstre : Prêtre Guérisseur
+mars 15, 2024 11:02:12 PM project.GameWindow chooseCardToPlay
+INFO: Joueur choisi  Prêtre Guérisseur
+mars 15, 2024 11:02:14 PM project.GameWindow playerEndTurn
+INFO: Le joueur a fini de jouer son tour
+mars 15, 2024 11:02:14 PM project.GameWindow drawEnemyCard
+INFO: L'ennemi a piocé une carte : Prêtre Guérisseur
+mars 15, 2024 11:02:14 PM project.GameWindow updateEnemyHand
+INFO: Mise à jour de la main de l'ennemi.
+mars 15, 2024 11:02:14 PM project.GameWindow drawEnemyCard
+INFO: Mise à jour de la main de l'ennemi
+mars 15, 2024 11:02:17 PM project.GameWindow drawCard
+INFO: Joueur: Joueur a pioché une carte.
+mars 15, 2024 11:02:17 PM project.GameWindow drawCard
+INFO: Mise à jour de la main du joueur.
+mars 15, 2024 11:02:19 PM project.GameWindow updateHandAfterPlayingCard
+INFO: Mise à jour de la main du joueur.
+mars 15, 2024 11:02:19 PM project.GameWindow playCard
+INFO: Le joueur a invoqué un monstre : Mascotte Enthousiaste
+mars 15, 2024 11:02:19 PM project.GameWindow chooseCardToPlay
+INFO: Joueur choisi  Mascotte Enthousiaste
+mars 15, 2024 11:02:20 PM project.GameWindow playerEndTurn
+INFO: Le joueur a fini de jouer son tour
+mars 15, 2024 11:02:20 PM project.GameWindow drawEnemyCard
+INFO: L'ennemi a piocé une carte : Chaton Mignon
+mars 15, 2024 11:02:20 PM project.GameWindow updateEnemyHand
+INFO: Mise à jour de la main de l'ennemi.
+mars 15, 2024 11:02:20 PM project.GameWindow drawEnemyCard
+INFO: Mise à jour de la main de l'ennemi
+mars 15, 2024 11:02:21 PM project.GameWindow updateEnemyHandAfterPlayingCard
+INFO: Mise à jour de la main de l'ennemi.
+mars 15, 2024 11:02:21 PM project.GameWindow playCard
+INFO: L'ennemi a invoqué un monstre : Prêtre Guérisseur
+mars 15, 2024 11:02:21 PM project.GameWindow playRandomCardFromHand
+INFO: L'ennemi a joué une carte : Prêtre Guérisseur
+mars 15, 2024 11:02:21 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:22 PM project.GameWindow useEnemySpecialAbility
+INFO: Joueur: Ennemi utilise sa capacité spéciale sur Joueur
+mars 15, 2024 11:02:22 PM project.GameWindow heal
+INFO: Ennemi soigne Joueur
+mars 15, 2024 11:02:23 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:23 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:24 PM project.GameWindow drawCard
+INFO: Joueur: Joueur a pioché une carte.
+mars 15, 2024 11:02:24 PM project.GameWindow drawCard
+INFO: Mise à jour de la main du joueur.
+mars 15, 2024 11:02:26 PM project.GameWindow updateHandAfterPlayingCard
+INFO: Mise à jour de la main du joueur.
+mars 15, 2024 11:02:26 PM project.GameWindow playCard
+INFO: Le joueur a invoqué un monstre : Guerrier Impitoyable
+mars 15, 2024 11:02:26 PM project.GameWindow chooseCardToPlay
+INFO: Joueur choisi  Guerrier Impitoyable
+mars 15, 2024 11:02:27 PM project.GameWindow setSelectedMonster
+INFO: Monstre sélectionné
+mars 15, 2024 11:02:27 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:28 PM project.GameWindow setSelectedMonster
+INFO: Monstre sélectionné
+mars 15, 2024 11:02:28 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:28 PM project.GameWindow setSelectedMonster
+INFO: Monstre sélectionné
+mars 15, 2024 11:02:29 PM project.GameWindow setSelectedMonster
+INFO: Monstre sélectionné
+mars 15, 2024 11:02:29 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:29 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:30 PM project.GameWindow isProtectionActive
+INFO: Protection inactive
+mars 15, 2024 11:02:30 PM project.GameWindow updateUIAfterAttack
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:30 PM project.GameWindow playerAttack
+INFO: Guerrier Impitoyable attaquePrêtre Guérisseur
+mars 15, 2024 11:02:31 PM project.GameWindow playerEndTurn
+INFO: Le joueur a fini de jouer son tour
+mars 15, 2024 11:02:31 PM project.GameWindow drawEnemyCard
+INFO: L'ennemi a piocé une carte : Soigneur Bienveillant
+mars 15, 2024 11:02:31 PM project.GameWindow updateEnemyHand
+INFO: Mise à jour de la main de l'ennemi.
+mars 15, 2024 11:02:31 PM project.GameWindow drawEnemyCard
+INFO: Mise à jour de la main de l'ennemi
+mars 15, 2024 11:02:31 PM project.GameWindow updateEnemyHandAfterPlayingCard
+INFO: Mise à jour de la main de l'ennemi.
+mars 15, 2024 11:02:31 PM project.GameWindow playCard
+INFO: L'ennemi a invoqué un monstre : Soigneur Bienveillant
+mars 15, 2024 11:02:31 PM project.GameWindow playRandomCardFromHand
+INFO: L'ennemi a joué une carte : Soigneur Bienveillant
+mars 15, 2024 11:02:32 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:32 PM project.GameWindow useEnemySpecialAbility
+INFO: Joueur: Ennemi utilise sa capacité spéciale sur Joueur
+mars 15, 2024 11:02:33 PM project.GameWindow setSelectedMonster
+INFO: Monstre sélectionné
+mars 15, 2024 11:02:34 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:34 PM project.GameWindow setSelectedMonster
+INFO: Monstre sélectionné
+mars 15, 2024 11:02:34 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:35 PM project.GameWindow isProtectionActive
+INFO: Protection inactive
+mars 15, 2024 11:02:35 PM project.GameWindow updateUIAfterAttack
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:35 PM project.GameWindow playerAttack
+INFO: Guerrier Impitoyable attaquePrêtre Guérisseur
+mars 15, 2024 11:02:35 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:36 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:36 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:37 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:38 PM project.GameWindow playerEndTurn
+INFO: Le joueur a fini de jouer son tour
+mars 15, 2024 11:02:38 PM project.GameWindow drawEnemyCard
+INFO: L'ennemi a piocé une carte : Sentinelle Intrépide
+mars 15, 2024 11:02:38 PM project.GameWindow updateEnemyHand
+INFO: Mise à jour de la main de l'ennemi.
+mars 15, 2024 11:02:38 PM project.GameWindow drawEnemyCard
+INFO: Mise à jour de la main de l'ennemi
+mars 15, 2024 11:02:38 PM project.GameWindow playCard
+INFO: Ennemi a joué un Protector, La protection a été invoquée avec succès!
+mars 15, 2024 11:02:38 PM project.GameWindow playCard
+INFO: Le Protector est de type : NON_CHAMPION
+mars 15, 2024 11:02:38 PM project.GameWindow updateEnemyHandAfterPlayingCard
+INFO: Mise à jour de la main de l'ennemi.
+mars 15, 2024 11:02:38 PM project.GameWindow playCard
+INFO: L'ennemi a invoqué un monstre : Sentinelle Intrépide
+mars 15, 2024 11:02:38 PM project.GameWindow playRandomCardFromHand
+INFO: L'ennemi a joué une carte : Sentinelle Intrépide
+mars 15, 2024 11:02:39 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:40 PM project.GameWindow useEnemySpecialAbility
+INFO: Joueur: Ennemi utilise sa capacité spéciale sur Joueur
+mars 15, 2024 11:02:40 PM project.GameWindow heal
+INFO: Ennemi se soigne
+mars 15, 2024 11:02:41 PM project.GameWindow setSelectedMonster
+INFO: Monstre sélectionné
+mars 15, 2024 11:02:41 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:41 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:42 PM project.GameWindow setSelectedMonster
+INFO: Monstre sélectionné
+mars 15, 2024 11:02:42 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:42 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:43 PM project.GameWindow isProtectionActive
+INFO: Protection active
+mars 15, 2024 11:02:44 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:45 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:45 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:45 PM project.GameWindow setSelectedMonster
+INFO: Monstre sélectionné
+mars 15, 2024 11:02:45 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:46 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:46 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:46 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:47 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:47 PM project.GameWindow isProtectionActive
+INFO: Protection active
+mars 15, 2024 11:02:47 PM project.GameWindow updateUIAfterAttack
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:47 PM project.GameWindow playerAttack
+INFO: Guerrier Impitoyable attaqueSentinelle Intrépide
+mars 15, 2024 11:02:47 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:48 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:49 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:49 PM project.GameWindow playerEndTurn
+INFO: Le joueur a fini de jouer son tour
+mars 15, 2024 11:02:49 PM project.GameWindow reduceProtectionTurns
+INFO: Le protector non champion  Sentinelle Intrépide a perdu un tour de protection.
+mars 15, 2024 11:02:49 PM project.GameWindow drawEnemyCard
+INFO: L'ennemi a piocé une carte : Garde Vaillant
+mars 15, 2024 11:02:49 PM project.GameWindow updateEnemyHand
+INFO: Mise à jour de la main de l'ennemi.
+mars 15, 2024 11:02:49 PM project.GameWindow drawEnemyCard
+INFO: Mise à jour de la main de l'ennemi
+mars 15, 2024 11:02:49 PM project.GameWindow updateEnemyHandAfterPlayingCard
+INFO: Mise à jour de la main de l'ennemi.
+mars 15, 2024 11:02:49 PM project.GameWindow playCard
+INFO: L'ennemi a invoqué un monstre : Chaton Mignon
+mars 15, 2024 11:02:49 PM project.GameWindow playRandomCardFromHand
+INFO: L'ennemi a joué une carte : Chaton Mignon
+mars 15, 2024 11:02:51 PM project.GameWindow boostWithRandomMascot
+INFO: Joueur: Ennemi booste Prêtre Guérisseur
+mars 15, 2024 11:02:51 PM project.GameWindow removeMonsterFromPanel
+INFO: Monstre supprimé du plateau : Chaton Mignon
+mars 15, 2024 11:02:53 PM project.GameWindow setSelectedMonster
+INFO: Monstre sélectionné
+mars 15, 2024 11:02:54 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:54 PM project.GameWindow setSelectedMonster
+INFO: Monstre sélectionné
+mars 15, 2024 11:02:54 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:54 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:54 PM project.GameWindow isProtectionActive
+INFO: Protection active
+mars 15, 2024 11:02:54 PM project.GameWindow updateUIAfterAttack
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:54 PM project.GameWindow playerAttack
+INFO: Guerrier Impitoyable attaqueSentinelle Intrépide
+mars 15, 2024 11:02:55 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:56 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:02:56 PM project.GameWindow playerEndTurn
+INFO: Le joueur a fini de jouer son tour
+mars 15, 2024 11:02:56 PM project.GameWindow reduceProtectionTurns
+INFO: Le protector non champion  Sentinelle Intrépide a perdu un tour de protection.
+mars 15, 2024 11:02:56 PM project.GameWindow drawEnemyCard
+INFO: Le deck est vide ! Création d'un nouveau deck. L'ennemi perd 5 points de vie.
+mars 15, 2024 11:02:56 PM project.GameWindow drawEnemyCard
+INFO: L'ennemi a piocé une carte : Chaton Mignon
+mars 15, 2024 11:02:56 PM project.GameWindow updateEnemyHand
+INFO: Mise à jour de la main de l'ennemi.
+mars 15, 2024 11:02:56 PM project.GameWindow drawEnemyCard
+INFO: Mise à jour de la main de l'ennemi
+mars 15, 2024 11:02:56 PM project.GameWindow updateEnemyHandAfterPlayingCard
+INFO: Mise à jour de la main de l'ennemi.
+mars 15, 2024 11:02:56 PM project.GameWindow playCard
+INFO: L'ennemi a invoqué un monstre : Chaton Mignon
+mars 15, 2024 11:02:56 PM project.GameWindow playRandomCardFromHand
+INFO: L'ennemi a joué une carte : Chaton Mignon
+mars 15, 2024 11:02:58 PM project.GameWindow boostWithRandomMascot
+INFO: Joueur: Ennemi booste Prêtre Guérisseur
+mars 15, 2024 11:02:58 PM project.GameWindow removeMonsterFromPanel
+INFO: Monstre supprimé du plateau : Chaton Mignon
+mars 15, 2024 11:02:58 PM project.GameWindow heal
+INFO: Ennemi se soigne
+mars 15, 2024 11:03:00 PM project.GameWindow setSelectedMonster
+INFO: Monstre sélectionné
+mars 15, 2024 11:03:00 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:03:00 PM project.GameWindow setSelectedMonster
+INFO: Monstre sélectionné
+mars 15, 2024 11:03:00 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:03:00 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:03:01 PM project.GameWindow isProtectionActive
+INFO: Protection active
+mars 15, 2024 11:03:01 PM project.GameWindow updateUIAfterAttack
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:03:01 PM project.GameWindow playerAttack
+INFO: Guerrier Impitoyable attaqueSentinelle Intrépide
+mars 15, 2024 11:03:01 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:03:02 PM project.GameWindow playerEndTurn
+INFO: Le joueur a fini de jouer son tour
+mars 15, 2024 11:03:02 PM project.GameWindow reduceProtectionTurns
+INFO: Le protector non champion  Sentinelle Intrépide a perdu un tour de protection.
+mars 15, 2024 11:03:02 PM project.GameWindow drawEnemyCard
+INFO: L'ennemi a piocé une carte : Mascotte Enthousiaste
+mars 15, 2024 11:03:02 PM project.GameWindow updateEnemyHand
+INFO: Mise à jour de la main de l'ennemi.
+mars 15, 2024 11:03:02 PM project.GameWindow drawEnemyCard
+INFO: Mise à jour de la main de l'ennemi
+mars 15, 2024 11:03:04 PM project.GameWindow setSelectedMonster
+INFO: Monstre sélectionné
+mars 15, 2024 11:03:04 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:03:04 PM project.GameWindow setSelectedMonster
+INFO: Monstre sélectionné
+mars 15, 2024 11:03:04 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:03:04 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:03:05 PM project.GameWindow isProtectionActive
+INFO: Protection active
+mars 15, 2024 11:03:05 PM project.GameWindow updateUIAfterAttack
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:03:05 PM project.GameWindow playerAttack
+INFO: Guerrier Impitoyable attaqueSentinelle Intrépide
+mars 15, 2024 11:03:05 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:03:05 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:03:06 PM project.GameWindow isProtectionActive
+INFO: Protection inactive
+mars 15, 2024 11:03:06 PM project.GameWindow updateUIAfterAttack
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:03:06 PM project.GameWindow playerAttack
+INFO: Guerrier Impitoyable attaqueSentinelle Intrépide
+mars 15, 2024 11:03:06 PM project.GameWindow playerAttack
+INFO: Sentinelle Intrépide est mort
+mars 15, 2024 11:03:06 PM project.GameWindow playerAttack
+INFO: Sentinelle Intrépide est supprimé du plateau de l'ennemi
+mars 15, 2024 11:03:07 PM project.GameWindow setSelectedMonster
+INFO: Monstre sélectionné
+mars 15, 2024 11:03:07 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:03:08 PM project.GameWindow setSelectedMonster
+INFO: Monstre sélectionné
+mars 15, 2024 11:03:08 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:03:09 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:03:09 PM project.GameWindow playerEndTurn
+INFO: Le joueur a fini de jouer son tour
+mars 15, 2024 11:03:09 PM project.GameWindow drawEnemyCard
+INFO: L'ennemi a piocé une carte : Soigneur Bienveillant
+mars 15, 2024 11:03:09 PM project.GameWindow updateEnemyHand
+INFO: Mise à jour de la main de l'ennemi.
+mars 15, 2024 11:03:09 PM project.GameWindow drawEnemyCard
+INFO: Mise à jour de la main de l'ennemi
+mars 15, 2024 11:03:09 PM project.GameWindow updateEnemyHandAfterPlayingCard
+INFO: Mise à jour de la main de l'ennemi.
+mars 15, 2024 11:03:09 PM project.GameWindow playCard
+INFO: L'ennemi a invoqué un monstre : Mascotte Enthousiaste
+mars 15, 2024 11:03:09 PM project.GameWindow playRandomCardFromHand
+INFO: L'ennemi a joué une carte : Mascotte Enthousiaste
+mars 15, 2024 11:03:10 PM project.GameWindow boostWithRandomMascot
+INFO: Joueur: Ennemi booste Mascotte Enthousiaste
+mars 15, 2024 11:03:10 PM project.GameWindow removeMonsterFromPanel
+INFO: Monstre supprimé du plateau : Mascotte Enthousiaste
+mars 15, 2024 11:03:12 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:03:12 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:03:13 PM project.GameWindow isProtectionActive
+INFO: Protection inactive
+mars 15, 2024 11:03:13 PM project.GameWindow updateUIAfterAttack
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:03:13 PM project.GameWindow playerAttack
+INFO: Guerrier Impitoyable attaquePrêtre Guérisseur
+mars 15, 2024 11:03:13 PM project.GameWindow playerAttack
+INFO: Prêtre Guérisseur est mort
+mars 15, 2024 11:03:13 PM project.GameWindow playerAttack
+INFO: Prêtre Guérisseur est supprimé du plateau de l'ennemi
+mars 15, 2024 11:03:14 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
+mars 15, 2024 11:03:16 PM project.GameWindow resetInfo
+INFO: Mise à jour de l'interface
