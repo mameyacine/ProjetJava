@@ -3,8 +3,8 @@ package project;
 import javax.swing.*;
 
 public class AttackAbility implements SpecialAbility {
-    private int damage; // Les dégâts de l'attaque
-    private GameWindow gameWindow; // Le GameWindow.java qui contient le champion
+    private int damage;
+    private GameWindow gameWindow;
 
     public AttackAbility(int damage, GameWindow gameWindow) {
         this.damage = damage;

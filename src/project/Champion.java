@@ -50,6 +50,13 @@ public class Champion extends Entity {
         }
     }
 
+    public void increaseHealthPoints(int amount) {
+        healthPoints += amount;
+
+    }
+
+
+
     // Méthode pour obtenir le deck du joueur
 
     public Board getBoard() {

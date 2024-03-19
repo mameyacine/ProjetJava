@@ -23,8 +23,8 @@ public class Tests {
         playerTurn = true;
         hasAttackedThisTurn = false;
         player = new Champion(1, "Player", 30);
-        enemy = new Champion(2, "Enemy", 30);
-        gameWindow = new GameWindow(null, null);
+        enemy = new Champion(2, "Enemi", 30);
+        gameWindow = new GameWindow(null, null, player.name, enemy.name);
     }
 
 

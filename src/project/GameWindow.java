@@ -71,184 +71,192 @@ public class GameWindow extends JFrame {
         }
     }
 
-    public GameWindow(Deck playerDeck, Deck enemyDeck) {
+    public GameWindow(Deck playerDeck, Deck enemyDeck, String playerName, String enemyName) {
         this.playerDeck = playerDeck;
         this.enemyDeck = enemyDeck;
-        this.enemyIconLabel = new JLabel();
-
-        player = new Champion(1, "Joueur", 30);
-        enemy = new Champion(2, "Ennemi", 30);
-
-        SpecialAbility attackAbility = new AttackAbility(5, this);
-        player.setSpecialAbility(attackAbility);
-        enemy.setSpecialAbility(attackAbility);
-
-        playerHand = player.getHand();
-        enemyHand = enemy.getHand();
-
-        setTitle("Hearthstone");
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(900, 700);
-        setLocationRelativeTo(null);
-
-        // Créer le panneau principal comme un BackgroundPanel pour afficher l'image de fond
-        BackgroundPanel mainPanel = new BackgroundPanel();
-        mainPanel.setLayout(new GridLayout(2, 1));
-
-        // Créez une bordure avec un titre personnalisé et une couleur de texte blanche
-        TitledBorder titledBorder = BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.WHITE), "Ennemi", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, new Font("SansSerif", Font.BOLD, 14), Color.WHITE);
-        titledBorder.setTitleColor(Color.WHITE);
-
-        // Créez un panneau pour représenter l'ennemi et appliquez la bordure
-        JPanel enemyPanel = new JPanel(new BorderLayout());
-        enemyPanel.setBorder(titledBorder);
 
 
-        // Chargement de l'image de l'ennemi depuis un fichier
-        ImageIcon enemyIcon = new ImageIcon("src/Icons/enemy.jpeg");
 
-        // Obtenir l'image de l'icône
-        Image image = enemyIcon.getImage();
+        // Demander le nom de l'utilisateur
 
-        // Redimensionner l'image tout en conservant ses proportions d'origine
-        Image scaledImage = image.getScaledInstance(60, -1, Image.SCALE_SMOOTH);
+        // Vérifier si l'utilisateur a saisi un nom valide
+        if (playerName != null && !playerName.isEmpty()) {
+            // Initialiser le champion du joueur avec le nom saisi
+            player = new Champion(1, playerName, 30);
+            enemy = new Champion(2, enemyName, 30); // Ennemi générique
 
-        // Création d'un JLabel pour afficher l'image de l'ennemi
-        JLabel enemyIconLabel = new JLabel(new ImageIcon(scaledImage));
-        enemyIconLabel.setPreferredSize(new Dimension(60, 60));
+            playerHand = player.getHand();
+            enemyHand = enemy.getHand();
 
-        // Création d'un JPanel pour contenir l'image de l'ennemi
-        JPanel enemyIconPanel = new JPanel();
-        enemyIconPanel.add(enemyIconLabel);
-        enemyIconPanel.setPreferredSize(new Dimension(scaledImage.getWidth(null), scaledImage.getHeight(null)));
+            player.setSpecialAbility(AbilityFactory.createRandomAbility(this));
+            enemy.setSpecialAbility(AbilityFactory.createRandomAbility(this));
 
-        // Ajout d'un écouteur de clics de souris sur l'image
-        enemyIconLabel.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                if (!isActive) {
-                    isActive = true;
-                    // Mettre à jour l'apparence de l'image pour indiquer qu'elle est sélectionnée
-                    enemyIconLabel.setBorder(BorderFactory.createLineBorder(Color.RED, 2));
-                } else {
-                    isActive = false;
-                    // Rétablir l'apparence normale de l'image
-                    enemyIconLabel.setBorder(null);
+
+            // Configurer la fenêtre
+            setTitle("Hearthstone");
+            setDefaultCloseOperation(EXIT_ON_CLOSE);
+            setSize(900, 700);
+            setLocationRelativeTo(null);
+
+            // Créer le panneau principal comme un BackgroundPanel pour afficher l'image de fond
+            BackgroundPanel mainPanel = new BackgroundPanel();
+            mainPanel.setLayout(new GridLayout(2, 1));
+
+            // Créez une bordure avec un titre personnalisé et une couleur de texte blanche
+            TitledBorder titledBorder = BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.WHITE), "Ennemi", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, new Font("SansSerif", Font.BOLD, 14), Color.WHITE);
+            titledBorder.setTitleColor(Color.WHITE);
+
+            // Créez un panneau pour représenter l'ennemi et appliquez la bordure
+            JPanel enemyPanel = new JPanel(new BorderLayout());
+            enemyPanel.setBorder(titledBorder);
+
+
+            // Chargement de l'image de l'ennemi depuis un fichier
+            ImageIcon enemyIcon = new ImageIcon("src/Icons/enemy.jpeg");
+
+            // Obtenir l'image de l'icône
+            Image image = enemyIcon.getImage();
+
+            // Redimensionner l'image tout en conservant ses proportions d'origine
+            Image scaledImage = image.getScaledInstance(60, -1, Image.SCALE_SMOOTH);
+
+            // Création d'un JLabel pour afficher l'image de l'ennemi
+            JLabel enemyIconLabel = new JLabel(new ImageIcon(scaledImage));
+            enemyIconLabel.setPreferredSize(new Dimension(60, 60));
+
+            // Création d'un JPanel pour contenir l'image de l'ennemi
+            JPanel enemyIconPanel = new JPanel();
+            enemyIconPanel.add(enemyIconLabel);
+            enemyIconPanel.setPreferredSize(new Dimension(scaledImage.getWidth(null), scaledImage.getHeight(null)));
+
+            // Ajout d'un écouteur de clics de souris sur l'image
+            enemyIconLabel.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    if (!isActive) {
+                        isActive = true;
+                        // Mettre à jour l'apparence de l'image pour indiquer qu'elle est sélectionnée
+                        enemyIconLabel.setBorder(BorderFactory.createLineBorder(Color.RED, 2));
+                    } else {
+                        isActive = false;
+                        // Rétablir l'apparence normale de l'image
+                        enemyIconLabel.setBorder(null);
+                    }
                 }
-            }
-        });
+            });
 
-        // Ajout de l'étiquette à votre interface utilisateur
-        enemyPanel.add(enemyIconLabel, BorderLayout.NORTH);
+            // Ajout de l'étiquette à votre interface utilisateur
+            enemyPanel.add(enemyIconLabel, BorderLayout.NORTH);
 
-        // Créez un panneau pour la main de l'ennemi
-        enemyHandPanel = new JPanel(new FlowLayout());
-
-        // Créer un bouton pour le plateau de l'ennemi
-        enemyBoardPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 10));
-
-        // Ajouter le panneau du plateau du joueur à un panneau pour le positionnement
-        JPanel boardContainerPanel1 = new JPanel(new BorderLayout());
-        boardContainerPanel1.add(enemyBoardPanel, BorderLayout.CENTER);
-        enemyPanel.add(boardContainerPanel1, BorderLayout.SOUTH);
-
-        //partie joueur
-
-        // Créez une bordure avec un titre personnalisé et une couleur de texte blanche
-        TitledBorder titledBorderPlayer = BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.WHITE), "Joueur", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, new Font("SansSerif", Font.BOLD, 14), Color.WHITE);
-        titledBorderPlayer.setTitleColor(Color.WHITE);
-
-// Créez un panneau pour représenter le joueur et appliquez la bordure
-        JPanel playerPanel = new JPanel(new BorderLayout());
-        playerPanel.setBorder(titledBorderPlayer);
+            // Créez un panneau pour la main de l'ennemi
+            enemyHandPanel = new JPanel(new FlowLayout());
 
 
-        currentPlayerLabel = new JLabel("Tour du joueur");
-        playerPanel.add(currentPlayerLabel, BorderLayout.SOUTH);
+            // Créer un bouton pour le plateau de l'ennemi
+            enemyBoardPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 10));
 
-        // Initialisation des composants pour l'ennemi
-        enemyHealthLabel = new JLabel("Points de vie de l'ennemi : " + enemy.getHealthPoints());
+            // Ajouter le panneau du plateau du joueur à un panneau pour le positionnement
+            JPanel boardContainerPanel1 = new JPanel(new BorderLayout());
+            boardContainerPanel1.add(enemyBoardPanel, BorderLayout.CENTER);
+            enemyPanel.add(boardContainerPanel1, BorderLayout.SOUTH);
 
+            //partie joueur
 
-        playerHealthLabel = new JLabel("Points de vie du joueur: " + player.getHealthPoints());
+            // Créez une bordure avec un titre personnalisé et une couleur de texte blanche
+            TitledBorder titledBorderPlayer = BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.WHITE), playerName, TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, new Font("SansSerif", Font.BOLD, 14), Color.WHITE);
+            titledBorderPlayer.setTitleColor(Color.WHITE);
 
-        // Créez le panneau pour représenter le plateau du joueur
-        playerBoardPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 10));
-        //playerBoardPanel.setBackground(Color.LIGHT_GRAY);
-
-        // Ajouter le panneau du plateau du joueur à un panneau pour le positionnement
-        JPanel boardContainerPanel2 = new JPanel(new BorderLayout());
-        boardContainerPanel2.add(playerBoardPanel, BorderLayout.CENTER);
-
-        // Ajouter le panneau du plateau du joueur au panneau principal du joueur (en haut)
-        playerPanel.add(boardContainerPanel2, BorderLayout.NORTH);
-
-        // Ajouter les boutons du joueur au panneau principal du joueur (au milieu)
-        JPanel playerButtonPanel = new JPanel(new FlowLayout());
-        JButton drawButton = new JButton("Piocher une carte");
-        drawButton.addActionListener(e -> {
-            drawCard(playerDeck);
-            updatePlayerHand();
-        });
-        playerButtonPanel.add(drawButton);
-
-        JButton playCardButton = new JButton("Jouer une carte");
-        playCardButton.addActionListener(e -> chooseCardToPlay());
-        playerButtonPanel.add(playCardButton);
-
-        playerAttackButton = new JButton("Attaquer");
-        playerAttackButton.addActionListener(e -> playerAttack());
-        playerButtonPanel.add(playerAttackButton);
-
-        JButton specialAbilityButton = new JButton("Capacité spéciale");
-        specialAbilityButton.addActionListener(e -> useSpecialAbility());
-        playerButtonPanel.add(specialAbilityButton);
-
-        JButton healButton = new JButton("Soin");
-        healButton.addActionListener(e -> useHeal());
-        playerButtonPanel.add(healButton);
-
-        JButton mascotButton = new JButton("Boost");
-        mascotButton.addActionListener(e -> useMascot());
-        playerButtonPanel.add(mascotButton);
-
-        playerEndTurnButton = new JButton("Fin de tour");
-        playerEndTurnButton.addActionListener(e -> playerEndTurn());
-        playerButtonPanel.add(playerEndTurnButton);
-
-        playerPanel.add(playerButtonPanel, BorderLayout.CENTER);
-
-        // Ajouter la main du joueur au panneau principal du joueur (en bas)
-        playerHandPanel = new JPanel(new FlowLayout());
-        playerPanel.add(playerHandPanel, BorderLayout.SOUTH);
-
-        // Création du label pour afficher les informations du monstre
-        InfoLabel = new JLabel("Ennemi: " + enemy.getHealthPoints() + "PV, Joueur : " + player.getHealthPoints() + "PV");
-        InfoLabel.setHorizontalAlignment(SwingConstants.CENTER); // Centrage du texte
-        add(InfoLabel, BorderLayout.SOUTH); // Ajout du label en bas de la fenêtre
-        // Pour les panneaux principaux
-        mainPanel.setOpaque(false);
-        enemyPanel.setOpaque(false);
-        playerPanel.setOpaque(false);
-        playerHandPanel.setOpaque(false);
-        playerButtonPanel.setOpaque(false);
-        playerBoardPanel.setOpaque(false);
-        boardContainerPanel2.setOpaque(false);
-        enemyBoardPanel.setOpaque(false);
-        boardContainerPanel1.setOpaque(false);
+            // Créez un panneau pour représenter le joueur et appliquez la bordure
+            JPanel playerPanel = new JPanel(new BorderLayout());
+            playerPanel.setBorder(titledBorderPlayer);
 
 
-        currentPlayerLabel.setOpaque(false);
+            currentPlayerLabel = new JLabel("Tour du joueur");
+            playerPanel.add(currentPlayerLabel, BorderLayout.SOUTH);
+
+            // Initialisation des composants pour l'ennemi
+            enemyHealthLabel = new JLabel("Points de vie de l'ennemi : " + enemy.getHealthPoints());
 
 
-        // Ajouter les panneaux du joueur et de l'ennemi au panneau principal
-        mainPanel.add(enemyPanel);
-        mainPanel.add(playerPanel);
+            playerHealthLabel = new JLabel("Points de vie du joueur: " + player.getHealthPoints());
 
-        // Ajouter le panneau principal au contenu de la fenêtre
-        add(mainPanel);
+            // Créez le panneau pour représenter le plateau du joueur
+            playerBoardPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 10));
+            //playerBoardPanel.setBackground(Color.LIGHT_GRAY);
+
+            // Ajouter le panneau du plateau du joueur à un panneau pour le positionnement
+            JPanel boardContainerPanel2 = new JPanel(new BorderLayout());
+            boardContainerPanel2.add(playerBoardPanel, BorderLayout.CENTER);
+
+            // Ajouter le panneau du plateau du joueur au panneau principal du joueur (en haut)
+            playerPanel.add(boardContainerPanel2, BorderLayout.NORTH);
+
+            // Ajouter les boutons du joueur au panneau principal du joueur (au milieu)
+            JPanel playerButtonPanel = new JPanel(new FlowLayout());
+            JButton drawButton = new JButton("Piocher une carte");
+            drawButton.addActionListener(e -> {
+                drawCard(playerDeck);
+                updatePlayerHand();
+            });
+            playerButtonPanel.add(drawButton);
+
+            JButton playCardButton = new JButton("Jouer une carte");
+            playCardButton.addActionListener(e -> chooseCardToPlay());
+            playerButtonPanel.add(playCardButton);
+
+            playerAttackButton = new JButton("Attaquer");
+            playerAttackButton.addActionListener(e -> playerAttack());
+            playerButtonPanel.add(playerAttackButton);
+
+            JButton specialAbilityButton = new JButton("Capacité spéciale");
+            specialAbilityButton.addActionListener(e -> useSpecialAbility());
+            playerButtonPanel.add(specialAbilityButton);
+
+            JButton healButton = new JButton("Soin");
+            healButton.addActionListener(e -> useHeal());
+            playerButtonPanel.add(healButton);
+
+            JButton mascotButton = new JButton("Boost");
+            mascotButton.addActionListener(e -> useMascot());
+            playerButtonPanel.add(mascotButton);
+
+            playerEndTurnButton = new JButton("Fin de tour");
+            playerEndTurnButton.addActionListener(e -> playerEndTurn());
+            playerButtonPanel.add(playerEndTurnButton);
+
+            playerPanel.add(playerButtonPanel, BorderLayout.CENTER);
+
+            // Ajouter la main du joueur au panneau principal du joueur (en bas)
+            playerHandPanel = new JPanel(new FlowLayout());
+            playerPanel.add(playerHandPanel, BorderLayout.SOUTH);
+
+            // Création du label pour afficher les informations du monstre
+            InfoLabel = new JLabel("Ennemi: " + enemy.getHealthPoints() + "PV, Joueur : " + player.getHealthPoints() + "PV");
+            InfoLabel.setHorizontalAlignment(SwingConstants.CENTER); // Centrage du texte
+            add(InfoLabel, BorderLayout.SOUTH); // Ajout du label en bas de la fenêtre
+            // Pour les panneaux principaux
+            mainPanel.setOpaque(false);
+            enemyPanel.setOpaque(false);
+            playerPanel.setOpaque(false);
+            playerHandPanel.setOpaque(false);
+            playerButtonPanel.setOpaque(false);
+            playerBoardPanel.setOpaque(false);
+            boardContainerPanel2.setOpaque(false);
+            enemyBoardPanel.setOpaque(false);
+            boardContainerPanel1.setOpaque(false);
+
+
+            currentPlayerLabel.setOpaque(false);
+
+
+            // Ajouter les panneaux du joueur et de l'ennemi au panneau principal
+            mainPanel.add(enemyPanel);
+            mainPanel.add(playerPanel);
+
+            // Ajouter le panneau principal au contenu de la fenêtre
+            add(mainPanel);
+        }
     }
-
 
     private void playCard(Card card) {
         // Récupérer le champion actif qui joue la carte

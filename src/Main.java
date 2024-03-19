@@ -1,28 +1,39 @@
 import project.*;
 
-
-
-import javax.swing.SwingUtilities;
+import javax.swing.*;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
 
-        // Affichage des noms et prénoms du binôme
-        //System.out.println("Joueurs : [Nom1 Prénom1], [Nom2 Prénom2]");
+        // Demander le nom de l'utilisateur
+        String playerName = JOptionPane.showInputDialog(null, "Veuillez saisir votre nom :", "Nom d'utilisateur", JOptionPane.PLAIN_MESSAGE);
+        String enemyName ="Enemi";
 
-        // Création de la fenêtre de jeu et affichage
-        SwingUtilities.invokeLater(() -> {
+        // Vérifier si le nom est valide
+        if (playerName != null && !playerName.isEmpty()) {
+            // Affichage des noms et prénoms du binôme
 
+
+            System.out.println("Joueurs : [" + playerName + "], [" + enemyName + "]");
+            // Créer les monstres disponibles
             List<Monster> availableMonsters = MonsterFactory.createMonsters();
+            // Créer les decks du joueur et de l'ennemi
             Deck playerDeck = new Deck(availableMonsters);
-            //playerDeck.printDeck();
             Deck enemyDeck = new Deck(availableMonsters);
 
-            GameWindow window = new GameWindow(playerDeck, enemyDeck);
-            window.setVisible(true);
 
-            //Le jeu commence avec le tour du joueur
-        });
+
+            // Création de la fenêtre de jeu
+            SwingUtilities.invokeLater(() -> {
+                GameWindow window = new GameWindow(playerDeck, enemyDeck, playerName, enemyName);
+                window.setVisible(true);
+
+                //Le jeu commence avec le tour du joueur
+            });
+        } else {
+            System.out.println("Nom invalide. Le jeu ne peut pas démarrer.");
+        }
     }
 }
+

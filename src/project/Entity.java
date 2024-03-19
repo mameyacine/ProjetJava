@@ -18,7 +18,6 @@ public abstract class Entity {
         }
     }
 
-    // Getters et setters
     public int getId() {
         return id;
     }
