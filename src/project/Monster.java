@@ -68,10 +68,10 @@ public class Monster extends Entity {
             protectors.put(this.type, protectorsOfType);
             // Initialiser la durée de la protection en fonction du type de cible
             if (this.getTargetType() == TargetType.CHAMPION) {
-                this.protectionTurns = 4;
+                this.protectionTurns = 2;
                 System.out.println("La protection de " + this.getName() + " qui protège le champion est maintenant active pendant " + this.protectionTurns + " tours.");
             } else {
-                this.protectionTurns = 8;
+                this.protectionTurns = 3;
                 System.out.println("La protection de " + this.getName() + " est maintenant active pendant " + this.protectionTurns + " tours.");
             }
         }

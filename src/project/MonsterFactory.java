@@ -19,6 +19,11 @@ public class MonsterFactory {
         monsters.add(new HealerMonster(8, "Prêtre Guérisseur", 90, 0, MonsterType.HEALER, 10));
         monsters.add(new Monster(9, "Mascotte Enthousiaste", 80, 0, MonsterType.MASCOT));
         monsters.add(new Monster(10, "Chaton Mignon", 70, 0, MonsterType.MASCOT));
+        monsters.add(new Monster(11, "Sorcier Maudit", 85, 20, MonsterType.CLASSIC));
+        monsters.add(new Monster(12, "Golem de Pierre", 75, 20, MonsterType.CLASSIC));
+        monsters.add(new Monster(11, "Esprit de Glace", 60, 20, MonsterType.CLASSIC));
+        monsters.add(new Monster(11, "Dragon de Feu", 85, 25, MonsterType.CLASSIC));
+        monsters.add(new Monster(11, "Chimère Dévoreuse", 60, 20, MonsterType.CLASSIC));
 
         return monsters;
     }
